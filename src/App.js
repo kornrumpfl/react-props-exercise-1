@@ -21,6 +21,11 @@ export default function App() {
   );
 }
 
-const HelloSomeone = () => {
-  return <div></div>;
+const HelloSomeone = ({name,greeting,hasDarkMode=false}) => {
+  
+return(
+    <div class={hasDarkMode?"dark":""}>
+      {greeting} {name="Mario"? " Boss":name}
+    </div>
+  );
 };
